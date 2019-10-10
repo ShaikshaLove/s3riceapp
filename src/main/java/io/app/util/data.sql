@@ -1,0 +1,1 @@
+insert into user_table values(473,'true','$2a$2a$10$EV5c/1TzscE3q.Hae3bvjemJ1lZ9zriQB7/UbJfXoMqoGvY1wbGAK','shaiksha')

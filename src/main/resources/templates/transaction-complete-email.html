@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>S3rice</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Roboto'
+	rel='stylesheet' type='text/css'>
+
+<!-- use the font -->
+<style>
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 48px;
+}
+
+th {
+	padding: 5px 20px 5px 20px;
+	text-align: center;
+}
+
+td {
+	padding: 5px 20px 5px 20px;
+	text-align: center;
+}
+</style>
+</head>
+
+
+<h2
+	style="background-color: black; align: center; color: orange; text-align: center; padding: 10px 0px 10px 0px">
+	S3rice pvt ltd</h2>
+<h3 style="color: purple">
+	Dear, &nbsp;<span th:text="${firstName}"></span> &nbsp;<span
+		th:text="${lastName}"></span>
+</h3>
+<h3 style="color: green">
+
+	You have paid the amount  &nbsp;<b style="color:navy" th:text="${trxAmount}"></b>&nbsp;Rupees
+	 &nbsp; against the due &nbsp;<b style="color:navy" th:text="${theDueBeforePayment}"></b> 
+</h3>
+<h3 style="color: red">
+	The payment details for the account number: <b
+		th:text="${accountNumber}"></b>
+</h3>
+<table border=1>
+	<tr  style="background-color: maroon">
+		<th><h4 style="color: white">Transaction Id </h4></th>
+		<th><h4 style="color: white">Transaction Date </h4></th>
+		<th><h4 style="color: white">The Due Before The Payment</h4></th>
+		<th><h4 style="color: white">The Paid Amount </h4></th>
+		<th><h4 style="color: white">The Remaining Due</h4></th>
+	</tr>
+	<tr style="padding: 20px 20px 20px 20px">
+		<td><h4 style="color: blue" th:text="${trxId}"></h4></td>
+		<td><h4 style="color: blue" th:text="${trxDate}"></h4></td>
+		<td><h4 style="color: blue" th:text="${theDueBeforePayment}"></h4></td>
+		<td><h4 style="color: blue" th:text="${trxAmount}"></h4></td>
+		<td><h4 style="color: blue" th:text="${theDueAfterPayment}"></h4></td>
+	</tr>
+</table>
+<p style="color: navy">Regards,<br>
+<b style="color: navy" th:text="${signature}"></b><br>
+<b style="color: navy" th:text="${location}"></b></p>
+</body>
+</html>

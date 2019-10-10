@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" ng-app="s3riceApp" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>S3rice</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
+<!-- Custom styles for this template -->
+<link href="css/pricing.css" rel="stylesheet">
+
+
+</head>
+<body>
+	<div
+		class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3  bg-danger border-bottom shadow-sm">
+		<h2 style="font-family: monospace;"
+			class="my-0 mr-md-auto  masthead-brand font-weight-bolder text-light">
+			<span class="text-warning">S3</span><span class="text-light">RICE</span>
+		</h2>
+
+		<nav class="my-2 my-md-0 mr-md-3">
+			<a class="p-2 text-light" href="#/">Home</a> <a
+				class="p-2 text-light" href="#/">Offers</a> <a
+				class="p-2 text-light" href="#/due-details">Check your due</a>
+		</nav>
+		<a class="btn btn-success" href="#/login">Official Login </a>
+	</div>
+	<div style="padding-bottom: 50px" class="container">
+
+		<div ng-view=""></div>
+	</div>
+
+	<!-- <footer class="pt-4 my-md-5 pt-md-5 border-top">
+		<img class="mb-2" src="images/s3rice.jpg" alt="" width="60"
+			height="30"> <small class="d-block mb-3 text-muted">&#169;2019
+			Designed and Developed by <a class="text-danger"
+			href="https://www.facebook.com/shaiksha.sha.505">Shaiksha</a>
+		</small>
+	</footer> -->
+
+	<nav style="background:white" class="navbar navbar-expand-sm  navbar-dark fixed-bottom">
+	<img class="mb-2" src="images/s3rice.jpg" alt="" width="80"
+			height="30">&nbsp;&nbsp; <small class="d-block mb-3 text-muted"> &#169;2019
+			Designed and Developed by <a class="text-danger"
+			href="https://www.facebook.com/shaiksha.sha.505">Shaiksha</a>
+		</small>
+	</nav>
+
+</body>
+</html>

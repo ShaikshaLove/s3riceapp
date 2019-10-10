@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>https://s3rice.herokuapp.com/</loc>
+
+      <lastmod>2019-10-06</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+
+
+   <url>
+
+      <loc>https://s3rice.herokuapp.com/due-details</loc>
+
+      <lastmod>2019-10-06</lastmod>
+
+      <changefreq>weekly</changefreq>
+
+   </url>
+
+   <url>
+
+      <loc>https://s3rice.herokuapp.com/offers</loc>
+
+      <lastmod>2019-10-06</lastmod>
+
+      <priority>0.3</priority>
+
+   </url>
+
+   <url>
+
+      <loc>https://s3rice.herokuapp.com/login</loc>
+
+      <lastmod>2019-10-06</lastmod>
+
+   </url>
+
+</urlset>

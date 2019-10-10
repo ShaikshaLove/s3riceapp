@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>S3rice</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Roboto'
+	rel='stylesheet' type='text/css'>
+
+<!-- use the font -->
+<style>
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 48px;
+}
+</style>
+</head>
+<body style="margin: 0; padding: 0;">
+
+	<!-- <table align="center" border="0" cellpadding="0" cellspacing="0"
+		width="600" style="border-collapse: collapse;">
+		<tr>
+			<td align="center" bgcolor="black" style="padding: 40px 0 30px 0;">
+				<h1 style="color:yellow"> S3rice pvt ltd</h1>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#eaeaea" style="padding:10px 10px 10px 10px;">
+			
+				<h2 style="color:red">Dear <span class="text-success" th:text="${firstName}"></span >&nbsp;<span class="text-success" th:text="${lastName}"></span></h2>
+				
+				       <h3 style="color:green">Welcome to s3rice family. Your account has been created successfully!</h3>
+				
+					<h3 style="color:black">The Account Number : <b th:text="${accountNumber}"></b></h3>
+				
+<br>
+				<p style="color:blue">Regards, </p>
+				<h4 style="color:blue" th:text="${signature}"></h4>
+
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="grey"  style="padding: 10px 10px 10px 10px; ">
+				<h3 th:text="${location}"></h3>
+			</td>
+		</tr>
+	</table> -->
+	<h2  style="background-color: black;align:center;color:orange;text-align: center;padding: 10px 0px 10px 0px">
+	      S3rice pvt ltd
+	</h2>
+	  <h3 style="color:purple" >Dear, &nbsp;<span  th:text="${firstName}"></span> &nbsp;<span  th:text="${lastName}"></span></h3>
+	  <p style="color:green">Welcome to s3rice! Your account has been created</p>
+	
+	<table>
+	    <tr>
+	      <th><h4 style="color:blue">The Account Number :</h4></th><td><h4 style="color:red" th:text="${accountNumber}"></h4></td>
+	    </tr>
+	</table>
+	<p style="color:navy">Regards, </p>
+	<span style="color:navy" th:text="${signature}"></span>
+	
+</body>
+</html>

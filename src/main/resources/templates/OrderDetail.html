@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>S3rice</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+@media ( min-width : 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+</style>
+<!-- Custom styles for this template -->
+<link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+	<!-- <nav
+		class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"> <span
+			class="text-warning">S3</span><span class="text-light">RICE</span>
+		</a> <input class="form-control form-control-light w-100" type="text"
+			placeholder="Search" aria-label="Search">
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<button class="btn btn-outline-success" href="#">Sign out</button>
+			</li>
+		</ul>
+	</nav> -->
+
+	<nav
+			class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+		<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"> <span
+				class="text-warning">S3</span><span class="text-light">RICE</span>
+
+		</a>
+		<!-- <input class="form-control form-control-dark w-100" type="text"
+			placeholder="Search" aria-label="Search"> -->
+
+		<marquee>
+			<h5 class="text-warning">S3rice welcomes you and Happy Ramadan.
+				Numerous pleasant surprises on this ramadan</h5>
+		</marquee>
+
+
+		<ul class="navbar-nav px-3">
+			<li class="nav-item text-nowrap">
+				<a class="btn btn-sm btn-danger" href="/logout">Log out</a>
+			</li>
+		</ul>
+
+	</nav>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+				<div class="sidebar-sticky">
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link active"
+												href="/dashboard"> <span data-feather="home"></span>
+							Dashboard <span class="sr-only">(current)</span>
+						</a></li>
+						<li class="nav-item"><a class="nav-link"
+												href="/account-creation"> <span data-feather="file"></span>
+							Account Creation
+						</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="/getAllCustomers"> <span
+								data-feather="users"></span> Customers
+						</a></li>
+						<li class="nav-item"><a class="nav-link" href="/regProduct"> <span
+								data-feather="bar-chart-2"></span> Create a new product
+						</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="/getAllProducts"> <span
+								data-feather="shopping-cart"></span> Products
+						</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="/regOrder"> <span
+								data-feather="bar-chart-2"></span> Create a new Order
+						</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="/getOrder"> <span
+								data-feather="bar-chart-2"></span> Order detail by Id
+						</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="/payNow"> <span
+								data-feather="layers"></span> Pay Now
+						</a></li>
+
+						<li class="nav-item"><a class="nav-link" href="/getTrxnPage"> <span
+								data-feather="layers"> Transaction Details</span>
+						</a></li>
+					</ul>
+
+					<h6
+							class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+						<span>Saved reports</span> <a
+							class="d-flex align-items-center text-muted" href="#"> <span
+							data-feather="plus-circle"></span>
+					</a>
+					</h6>
+					<ul class="nav flex-column mb-2">
+						<li class="nav-item"><a class="nav-link" href="#"> <span
+								data-feather="file-text"></span> Current month
+						</a></li>
+						<li class="nav-item"><a class="nav-link" href="#"> <span
+								data-feather="file-text"></span> Last quarter
+						</a></li>
+						<!-- <li class="nav-item"><a class="nav-link" href="#"> <span
+								data-feather="file-text"></span> Social engagement
+						</a></li>
+						<li class="nav-item"><a class="nav-link" href="#"> <span
+								data-feather="file-text"></span> Year-end sale
+						</a></li> -->
+
+						<li><img class="mb-2" src="images/s3rice.jpg" alt=""
+								 width="60" height="30"> <small
+								class="d-block mb-3 text-dark">&#169;2019 Developed by <a
+								class="text-danger"
+								href="https://www.facebook.com/shaiksha.sha.505">Shaiksha
+							Sayyad</a>
+						</small></li>
+					</ul>
+
+
+
+				</div>
+
+
+			</nav>
+		</div>
+	</div>
+	<main style="margin-top: 50px;" role="main"
+		class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+
+	<form class="shadow-lg border  rounded border-success"
+		style="padding-bottom: 20px" th:action="@{/getOrderById}" method="get">
+
+		<div style="padding-top: 30px" class="form-row">
+			<div class="col-md-4 mb-3">
+				<h4 class="text-center tex-danger">Enter Order ID</h4>
+			</div>
+			<div class="col-md-4 mb-3">
+
+				<input type="text" class="form-control" id="validationTooltip02"
+					placeholder="Enter Order Id" name="orderId" />
+				<div class="valid-tooltip">Looks good!</div>
+			</div>
+
+			<div class="col-md-4 mb-3">
+				<button type="submit" class="btn btn-md btn-warning">Get
+					Details</button>
+			</div>
+		</div>
+
+	</form>
+
+
+
+	<div style="padding-top: 50px" th:if="${purchaseOrder!=null}">
+		<h3 style="color: red" class="text-center"
+			th:text="|The Order Details For The Order ID : ${purchaseOrder.orderId}|"></h3>
+		<hr color="red">
+
+		<table class="table table-bordered table-dark">
+			<thead>
+				<tr>
+					<th>Product ID</th>
+					<th>Product Name</th>
+					<th>Product Type</th>
+					<th>Net Weight (KG)</th>
+					<th>Product Cost</th>
+					<th>Purchased Quantity</th>
+					<th>Total Cost</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="orderDetail: ${purchaseOrder.orderdetails}">
+
+					<td th:text="${orderDetail.product.productId}"></td>
+					<td th:text="${orderDetail.product.productName}"></td>
+					<td th:text="${orderDetail.product.productType}"></td>
+					<td th:text="${orderDetail.product.netWeight}"></td>
+					<td th:text="${orderDetail.product.currentCost}"></td>
+					<td th:text="${orderDetail.quantity}"></td>
+					<td th:text="${orderDetail.cost}"></td>
+				</tr>
+				<tr>
+					<td class="font-weight-bold text-warning text-center" colspan="3">Final
+						Cost</td>
+					<td class="font-weight-bold text-warning text-center" colspan="3"
+						th:text="${purchaseOrder.orderAmount}"></td>
+
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+
+
+	</main>
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')
+	</script>
+	<script src="/docs/4.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+	<script src="dashboard.js"></script>
+</body>
+</html>
